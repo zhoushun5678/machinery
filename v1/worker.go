@@ -26,7 +26,7 @@ type Worker struct {
 	ConsumerTag       string
 	Concurrency       int
 	Queue             string
-	errorHandler      func(*tasks.Signature, err error)
+	errorHandler      func(signature *tasks.Signature, err error)
 	preTaskHandler    func(*tasks.Signature)
 	postTaskHandler   func(*tasks.Signature)
 	preConsumeHandler func(*Worker) bool
